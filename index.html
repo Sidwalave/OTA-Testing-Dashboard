@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTA Testing & Validation Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="logo">OTA<span>LAB</span></div>
+  <nav>
+    <button class="nav-btn active" data-page="dashboard">📊 Dashboard</button>
+    <button class="nav-btn" data-page="machines">🖥️ Machines</button>
+    <button class="nav-btn" data-page="results">📋 Test Results</button>
+    <button class="nav-btn" data-page="history">📈 Test History</button>
+    <button class="nav-btn" data-page="reports">📁 Reports</button>
+    <button class="nav-btn" data-page="about">ℹ️ About Project</button>
+  </nav>
+</aside>
+
+<main class="main">
+<header>
+  <div>
+    <h1>OTA Testing & Validation Dashboard</h1>
+    <p>5G New Radio OTA Test Monitoring System</p>
+  </div>
+  <div class="date">📅 <span id="currentDate"></span></div>
+</header>
+
+<section id="dashboard" class="page">
+<h2>Dashboard Overview</h2>
+<div class="cards">
+  <div class="card"><div class="icon">🖥️</div><div><h3>15</h3><p>OTA Machines</p></div></div>
+  <div class="card"><div class="icon">📡</div><div><h3>30</h3><p>Total Test Sides</p></div></div>
+  <div class="card"><div class="icon">🧪</div><div><h3>275</h3><p>Total Tests</p></div></div>
+  <div class="card"><div class="icon">✅</div><div><h3>89.3%</h3><p>Pass Rate</p></div></div>
+</div>
+<div class="charts">
+  <div class="chart-box"><h3>Test Results</h3><canvas id="resultChart"></canvas></div>
+  <div class="chart-box"><h3>Machine Performance</h3><canvas id="machineChart"></canvas></div>
+</div>
+<div class="panel">
+<h3>Machine Status</h3>
+<div class="machine-grid" id="machineGrid"></div>
+</div>
+</section>
+
+<section id="machines" class="page hidden">
+<h2>OTA Machine Status</h2>
+<div class="panel">
+<table><thead><tr><th>Machine</th><th>Side A</th><th>Side B</th><th>Overall</th></tr></thead>
+<tbody id="machineTable"></tbody></table>
+</div>
+</section>
+
+<section id="results" class="page hidden">
+<h2>Test Results</h2>
+<div class="panel">
+<input id="searchBox" class="search" placeholder="Search machine, test ID, side or result...">
+<table><thead><tr><th>Test ID</th><th>Machine</th><th>Side</th><th>Test Type</th><th>Result</th><th>Date</th></tr></thead>
+<tbody id="resultsTable"></tbody></table>
+</div>
+</section>
+
+<section id="history" class="page hidden">
+<h2>Test History</h2>
+<div class="panel"><h3>Historical Pass Rate</h3><canvas id="historyChart"></canvas></div>
+</section>
+
+<section id="reports" class="page hidden">
+<h2>Reports</h2>
+<div class="cards">
+  <div class="report-card">📄<h3>Daily Report</h3><button>View Report</button></div>
+  <div class="report-card">📊<h3>Weekly Report</h3><button>View Report</button></div>
+  <div class="report-card">📈<h3>Monthly Report</h3><button>View Report</button></div>
+</div>
+</section>
+
+<section id="about" class="page hidden">
+<h2>About Project</h2>
+<div class="panel">
+<h3>OTA Testing & Validation Dashboard</h3>
+<p>This portfolio project demonstrates centralized monitoring and analysis of OTA testing activities across multiple test machines.</p>
+<h3>Key Features</h3>
+<ul class="features">
+<li>15 OTA test machines</li><li>Side-A and Side-B monitoring</li>
+<li>PASS / FAIL analysis</li><li>Machine-wise performance</li>
+<li>Test history and charts</li><li>Responsive web dashboard</li>
+</ul>
+<h3>Technology Used</h3>
+<p>HTML5 • CSS3 • JavaScript • Chart.js • GitHub Pages</p>
+<p class="note">Use only dummy or anonymized data in a public portfolio repository.</p>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
